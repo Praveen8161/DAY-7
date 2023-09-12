@@ -4,7 +4,7 @@ xhr.send();
 
 xhr.onload = function(){
     const data = JSON.parse(xhr.response);
-    //console.log(data[17]);
+    //console.log(data[0]);
 
     console.group("a. Get all the countries from Asia continent/region using Filter function");
     let asiaCountries = data.filter((value) => {return value.continents[0] === "Asia"})
