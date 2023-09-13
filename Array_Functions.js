@@ -35,8 +35,8 @@ xhr.onload = function(){
 
     console.group("d. Print the total population of countries using reduce function");
     let totalPopulation = data.reduce((total,value) => {
-        return value.population;
-    });
+        return total + value.population;
+    },0);
     console.log(`Total Population: ${totalPopulation}`);
     console.groupEnd();
 
